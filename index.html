@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Site</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/90196bfd04.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+
+
+
+
+.hide{
+    display:none;
+
+}
+
+
+
+
+        .contcth1{
+            text-align: left;
+        }
+
+
+
+
+.hiddengid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top:50px;
+    transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    transform: scale(1.5s);
+}
+/* up */
+#up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: none;
+    cursor: pointer;
+     padding: 10px;/* Add padding for better spacing */
+     border-radius: 50%; 
+    background-color:rgba(255, 255, 255, 0.555);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); Add shadow for 3D effect */
+    transition: transform 0.3s ease, background 0.3s ease; /* Smooth transition for hover effect */
+    border: none;
+}
+
+#up i {
+    font-size: 24px;
+    color: #186b31; /* White color for the icon to stand out */
+}
+
+#up.show {
+    display: block;
+}
+
+#up:hover {
+    transform: translateY(-5px); /* Move the button up slightly on hover */
+    /* background: linear-gradient(145deg, #50d67d, #636e74); Change gradient direction on hover */
+}
+    
+
+
+.logo {
+    position: fixed; /* Keeps the logo fixed during scrolling */
+    top: 0; /* Aligns the top of the image to the top of the viewport */
+    left: 0; /* Aligns the left of the image to the left of the viewport */
+    width: 110px; /* Optional: Adjust according to your preference */
+    margin: 0; /* Removes any default margin */
+    padding: 10px; /* Adds some space around the image inside the fixed position */
+}
+
+    </style>
+    <style>
+
+
+/* #sidemenu a, #sidemenu i.fa-bars {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+#sidemenu ul {
+    display: none; /* Initially hide social icons on mobile 
+} */
+
+/* #sidemenu i.fa-xmark {
+    display: none; /* Hide close icon initially */
+/* }
+
+#sidemenu i.fa-bars {
+    display: block; /* Show menu bar icon initially 
+} */ 
+
+/* Hide the logo when position is fixed to avoid overlap */
+/* .logo {
+    display: none;
+} */
+
+    </style>
+
+
+
+</head>
+<body>
+
+    <div>
+        <nav id="sidemenu">
+           <a href="#header"> <img src="images/Logo.svg"  class="logo" width="110px"  style="position: fixed;"  alt="logo"> </a>
+            
+            <a href="#header">Home</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#services">Expertise</a>
+            <a href="#about">About Me</a>
+            <a href="#contact">Contact</a>
+            
+            <ul>
+                <li><a href="https://www.instagram.com/harjotsinghproductions/"><i class="fab fa-instagram" ></i></a></li>
+                <li><a href="https://www.linkedin.com/in/officialharjotsingh/"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://www.artstation.com/officialharjotsingh"><i class="fab fa-artstation"></i></a></li>
+                <i class="fa-solid fa-xmark"  onclick="closemenu()" ></i>
+            </ul>
+           
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+
+    </div>
+
+
+    <div id="header">
+        
+  
+
+
+
+        <div class="container">
+            <!-- <a href="#home">Home</a> -->
+            
+
+            <h1 class="sub-title">Latest Updates</h1>
+            <div class="gallery animate-on-scroll hidden">
+                <div class="gallery-panel"><a href="Assets/spider.html"><img src="spiderimages/Silky.jpg" alt="spider"></a></div>  
+        
+                          
+                <div class="gallery-panel"><a href="Assets/gos.html"><img src="spiderimages/project_1.jpg" alt="Playing Cards"></a></div>
+                <div class="gallery-panel"><a href="Assets/katana.html"><img src="spiderimages/project_2.jpg" alt="Katana"></a></div>
+                <div class="gallery-panel">
+                    <a href="Assets/chess.html">
+                        <img src="spiderimages/Harjot_Singh_chesspieces_week10.jpg" alt="Chess">
+                    </a>
+                </div>
+                <div class="gallery-panel"><a href="Assets/envirn.html"><img src="spiderimages/project_3.jpg" alt="Environment"></a></div>
+                <!-- <div class="gallery-panel"><img src="Images/2.1.jpg" alt="Smiling Face"></div> -->
+            </div>
+        </div>
+    </div>
+    <button id="up">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+    <!-- portfolio -->
+
+    <div id="portfolio" class="container animate-on-scroll hidden">
+        <h1 class="sub-title">Portfolio</h1>
+        <div class="work-list animate-on-scroll hidden">
+            <!-- Portfolio items -->
+
+            <div class="work animate-on-scroll ">
+                <img src="spiderimages/Silky.jpg"  alt="project 3" />
+                <div class="layer">
+                    <h3>Silky</h3>
+                    <p> A vibrantly colored, pink and black tarantula navigates a delicate spiderweb, set against a soft-focus forest backdrop. Below, moss-covered rocks anchor a pair of solitary, red-capped mushrooms, adding a touch of still life to the dynamic tableau.</p>
+                    <a href="Assets/spider.html"><i class="fa-solid fa-plus"></i></a>
+                </div>
+            </div>
+
+
+
+            <div class="work animate-on-scroll hidden" >
+                <img src="images/project_1.jpg" alt="project 1" />
+                <div class="layer">
+                    <h3>Prestigious Souls</h3>
+                    <p>Introducing the 3D Luxury Playing Card Box: Ebony lacquer exterior, 24-karat gold leaf emblem, plush burgundy velvet interior with precision compartments. Secure magnetic closure, symbolizing refinement and taste.</p>
+                    <a href="Assets/gos.html"><i class="fa-solid fa-plus"></i></a>
+                </div>
+            </div>
+            <div class="work animate-on-scroll hidden">
+                <img src="images/project_2.jpg" alt="project 2" /> 
+                <div class="layer">
+                    <h3>Katana</h3>
+                    <p>Katana sword with a detailed red cord-wrapped hilt, a gold floral-patterned tsuba, and a reflective, polished blade, showcasing advanced texturing, realistic lighting, and high-quality rendering techniques...</p>
+                    <a href="Assets/katana.html"><i class="fa-solid fa-plus"></i></a>
+                </div>
+            </div>
+      
+           
+        </div>
+        <div class="hiddengid animate-on-scroll hidden">
+            <div class="work animate-on-scroll hide show-on-click"> <!-- Hidden project -->
+                <img src="images/Harjot_Singh_chesspieces_week10.jpg" height="400px" alt="project 4" />
+                <div class="layer">
+                    <h3>Virtual Reality</h3>
+                    <p>Explore immersive virtual worlds with cutting-edge VR technology, offering interactive experiences that blur the line between reality and imagination.</p>
+                    <a href="Assets/chess.html"><i class="fa-solid fa-plus"></i></a>
+                </div>
+            </div>
+            <div class="work animate-on-scroll hide show-on-click"> <!-- Hidden project -->
+                <img src="images/2.1.jpg" height="400px" alt="project 5" />
+                <div class="layer">
+                    <h3> waLLE</h3>
+                    <p>Explore immersive virtual worlds with cutting-edge VR technology, offering interactive experiences that blur the line between reality and imagination.</p>
+                    <a href="Assets/virtual.html"><i class="fa-solid fa-plus"></i></a>
+                </div>
+            </div>
+            <div class="work animate-on-scroll hide show-on-click"> <!-- Hidden project -->
+                <img src="images/project_3.jpg" height="400px" alt="project 5" />
+                <div class="layer">
+                    <h3>Environment</h3>
+                    <p>The "Environment" project image portrays a hyperrealistic 3D-rendered stone surface with textured moss and lichen details, set against a soft-focus backdrop of lush greenery, exemplifying advanced environmental modeling and texturing capabilities.</p>
+                    <a href="Assets/envirn.html"><i class="fa-solid fa-plus"></i></a>
+                </div>
+            </div>
+            
+        </div>
+        <a href="#" class="btn">see more</a>
+    </div>
+
+    
+    
+    
+    <!-- Additional sections like services, about, and contact 
+    
+    
+    -->
+
+    <div id="services" class="animate-on-scroll hidden">
+        <div class="container animate-on-scroll hidden">
+            <h1 class="sub-title">Expertise</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-bugs"></i>
+                    <h2>Creature design</h2>
+                    <p> As a Creature Design specialist in 3D artistry, I provide comprehensive services
+                         to transform your imaginative concepts into reality. My expertise spans from initial concept development
+                         through detailed modeling and animation, ensuring an immersive experience in captivating, uniquely crafted worlds.</p>
+                        <a href="https://conestogagigs.ca/harjot-singh-productions/">Learn more</a>
+                </div>
+                <div class="animate-on-scroll hidden">
+                    <i class="fa-brands fa-web-awesome"></i>
+                    <h2>Asset design</h2>
+                    <p>
+                        Get your 3D assets for multimedia projects, specializing in creating detailed models,
+                         textures, and animations. With a blend of artistic skills and technical expertise, 
+                           Also offers craft visually compelling and functional elements designed to enhance video games, films, and other digital experiences. 
+                         If you're looking to elevate your project with high-quality 3D assets, let's talk!
+    
+    
+    
+    
+    
+    
+                    </p>
+                        <a href="https://conestogagigs.ca/harjot-singh-productions/">Learn more</a>
+                </div>
+                <div class="animate-on-scroll hidden">
+                    <i class="fa-brands fa-envira"></i>
+                    <h2  >Environment design</h2>
+                    <p>
+                        Specializing in environment design, this service offers immersive and visually stunning settings for video games, films, and virtual reality experiences.
+                         With expertise in spatial composition and thematic detailing, compelling backdrops are created to enhance storytelling and gameplay. 
+                         Ideal for projects seeking to transform their visual appeal with captivating environments.</p>
+                        <a href="https://conestogagigs.ca/harjot-singh-productions/">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- about --> 
+    <div id="about" class="animate-on-scroll hidden">
+        <div class="container animate-on-scroll hidden">
+            <div class=" animate-on-scroll hidden">
+               
+                <div class="about-col-2">
+                    <h1 class="sub-title" style="color: #666;" >About me</h1>
+                    <p  style="font-size: 30px;">Hello! I am Harjot Singh.
+    
+                        As a 3D artist with a B.Sc. degree, I fuse technical prowess with creative passion. I excel in presenting ideas with depth and emotion, driven by meticulous attention to detail. My planning skills ensure not just meeting, but exceeding expectations. A perpetual learner, I adapt to industry shifts and embrace feedback for growth.
+                         I'm eager to infuse your team with my personal touch, bringing enthusiasm and precision to every project.​</p>
+                         
+                         </div>
+    
+                        
+                         
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    <!------------------------------contact--------------------------->
+    <div id="contact" class="animate-on-scroll hidden">
+        <div class="container">
+            <div class="row">
+                
+                <div class="contact-left">
+                   
+                    <h1 class="sub-title contcth1"  >Contact me</h1>
+                    
+                    <p><i class="fa-solid fa-paper-plane"></i>officialharjotsingh@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+1(647)-627-5793</p>
+                    <div class="social-icons">
+                      
+                        <a href="https://www.instagram.com/harjotsinghproductions/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/officialharjotsingh/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.artstation.com/officialharjotsingh"><i class="fa-brands fa-artstation"></i></a>
+                    </div>
+                    <a href="images/harjotresume.pdf" download class="btn btn2"> Download Resume</a>
+                </div>
+                <div class="contact-right animate-on-scroll hidden">
+                    <form name="submit-to-google-sheet" action="https://formspree.io/f/mwkgwody" method="POST">
+                        <input type="text" name="Name" placeholder="YourName" required/>
+                        <input type="email" name="Email" placeholder="YourEmail@mail.com" required/>
+                        <textarea name="Message" rows="6" placeholder="Write your message here..."></textarea>
+                        <button type="submit" class="btn btn2">Send Message</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    <div class="copyright animate-on-scroll hidden"   style="height: 150px;" >
+       <p  style="margin-top:40px ;" > © Copyright Harjot Singh | All Rights Reserved.<br>
+        </p>
+    </div>
+    </div>
+    
+    
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.nav .fas');
+            const navUL = document.querySelector('nav ul');
+            
+            menuToggle.addEventListener('click', function() {
+                navUL.classList.toggle('active');
+            });
+        });
+    </script>
+    <script>
+   document.addEventListener("DOMContentLoaded", function() {
+            const seeMoreBtn = document.querySelector('.btn'); // The "see more" button
+            const hiddenWorks = document.querySelectorAll('.work.hide'); // All hidden works
+            const showOnClickWorks = document.querySelectorAll('.show-on-click'); // Hidden works to show on click
+
+            seeMoreBtn.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevents the default anchor link behavior
+                // Toggle visibility of each hidden work item
+                hiddenWorks.forEach(work => {
+                    work.classList.toggle('hide'); // Toggle the "hidden" class
+                });
+
+                // Update button text based on visibility state
+                if (seeMoreBtn.textContent === 'see more') {
+                    seeMoreBtn.textContent = 'see less'; // Change button text to "see less" if items are visible
+                } else {
+                    seeMoreBtn.textContent = 'see more'; // Change button text back to "see more" if items are hidden
+                }
+            });
+        });
+
+
+
+    </script>
+    <script>
+        
+        // Fetch and include header
+        fetch('Assets/header.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('header-container').innerHTML = html;
+            });
+
+    </script>
+
+
+    <script src="js/button.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const loader = document.querySelector('.loader');
+            loader.style.display = 'flex';
+            window.onload = () => { loader.style.display = 'none'; };
+        });
+    </script>
+
+
+
+<!-- sidemenu -->
+<script>
+    function openmenu() {
+        document.querySelector('#sidemenu ul').style.display = 'block';
+        document.querySelector('#sidemenu i.fa-xmark').style.display = 'block';
+        document.querySelector('#sidemenu i.fa-bars').style.display = 'none';
+    }
+    
+    function closemenu() {
+        document.querySelector('#sidemenu ul').style.display = 'none';
+        document.querySelector('#sidemenu i.fa-xmark').style.display = 'none';
+        document.querySelector('#sidemenu i.fa-bars').style.display = 'block';
+    }
+    </script>
+    
+</body>
+</html>

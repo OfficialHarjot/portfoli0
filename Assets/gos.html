@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prestigious Souls</title>
+  <!-- <link rel="stylesheet" href="css/gallery.css"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/90196bfd04.js" crossorigin="anonymous"></script>
+<!-- <link rel="stylesheet" href="../css/gos.css"> -->
+
+<style>
+  body {
+      background-color: rgb(34, 34, 34);
+      font-family: 'Raleway', sans-serif;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    .gallery__caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    color: #fafafa;
+    background: #22222200; /* Dark background for contrast */
+    font-family: 'Times New Roman', serif;
+    font-size: 16px;
+    text-align: center;
+    /* box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.502);  */
+    opacity: 0.8; /* Slightly transparent */
+}
+
+.gallery__link:hover .gallery__caption {
+    font-style: italic; /* Italic text on hover */
+    opacity: 1;
+}
+
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 20px;
+      margin-top: 5%;
+    }
+    
+    .gallery__column {
+      flex: 1 1 250px;
+      margin: 5px;
+    }
+    
+    .gallery__link {
+      overflow: hidden;
+      display: block;
+      margin: 10px;
+      border-radius: 8px;
+      position: relative;
+    }
+    
+    .gallery__image {
+      width: 100%;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      filter: grayscale(100%);
+      border-radius: 8px;
+    }
+    
+    .gallery__link:hover .gallery__image {
+      transform: scale(1.1);
+      filter: grayscale(0);
+    }
+    
+    /* .gallery__caption {
+      position: absolute;
+      bottom: 0;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      text-align: center;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+    
+    .gallery__link:hover .gallery__caption {
+      opacity: 1;
+    }
+
+    .gallery__caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    color: #fafafa;
+    background: #222; /* Dark background for contrast */
+    /* font-family: 'Times New Roman', serif;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for 3D effect */
+    /* opacity: 0.8; /* Slightly transparent */
+/* }
+
+.gallery__link:hover .gallery__caption {
+    font-style: italic; /* Italic text on hover */
+    /* opacity: 1;
+} */ 
+
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      overflow: auto;
+      padding: 20px;
+    }
+
+    .modal-content {
+      position: relative;
+      margin: auto;
+      display: block;
+      max-width: 90%;
+    max-height: 90%;
+    }
+
+    .close {
+      margin-right: 5%;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      background-color: rgb(59, 51, 51);
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+
+    .close:hover {
+      background-color: rgb(87, 80, 80);
+    }
+
+    .slider-container {
+    position: relative;
+    width: 100%;
+    /* max-width: 600px; Adjust max-width as needed */
+    margin: auto;
+  }
+
+  .slider-image {
+    display: block;
+    width: 100%;
+    /* max-height: 400px; Adjust max-height as needed */
+    object-fit: contain;
+    margin: auto;
+  }
+
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 100px;
+    cursor:pointer;
+    color: #666;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+
+
+
+  
+</style>
+
+
+
+</head>
+<body>
+  <div id="header-container"></div>
+  <div class="gallery">
+    <div class="gallery__column">
+      <!-- Image 1 -->
+      <a href="#" class="gallery__link">
+        <figure class="gallery__thumb">
+          <img src="../images/project_1.jpg" alt="Portrait by Harjot Singh" class="gallery__image">
+          <figcaption class="gallery__caption">Prestigious Souls</figcaption>
+        </figure>
+      </a>
+      <!-- Image 2 -->
+      <a href="#" class="gallery__link">
+        <figure class="gallery__thumb">
+          <img src="../gosimages/1.jpg" alt="Portrait by Oladimeji Odunsi" class="gallery__image">
+          <figcaption class="gallery__caption">part1</figcaption>
+        </figure>
+      </a>
+      <!-- Image 3 -->
+      <a href="#" class="gallery__link">
+        <figure class="gallery__thumb">
+          <img src="../gosimages/2.jpg" alt="Portrait by Alex Perez" class="gallery__image">
+          <figcaption class="gallery__caption">part 2</figcaption>
+        </figure>
+      </a>
+    </div>
+    <div class="gallery__column">
+      <!-- Image 4 -->
+      <a href="#" class="gallery__link">
+        <figure class="gallery__thumb">
+          <img src="../gosimages/3.jpg" alt="Portrait by Hikiapp" class="gallery__image">
+          <figcaption class="gallery__caption">part3</figcaption>
+        </figure>
+      </a>
+      <!-- Image 5 -->
+      <a href="#" class="gallery__link">
+        <figure class="gallery__thumb">
+          <img src="../gosimages/4.jpg" alt="Portrait by Jeffery Erhunse" class="gallery__image">
+          <figcaption class="gallery__caption">Part5</figcaption>
+        </figure>
+      </a>
+      <!-- Image 6 -->
+      <a href="#" class="gallery__link">
+        <figure class="gallery__thumb">
+          <img src="../gosimages/5.jpg" alt="Portrait by Mari Lezhava" class="gallery__image">
+          <figcaption class="gallery__caption">part6</figcaption>
+        </figure>
+      </a>
+    </div>
+    <div class="gallery__column">
+      <!-- Image 7 -->
+      <a href="#" class="gallery__link">
+        <figure class="gallery__thumb">
+          <img src="../gosimages/6.jpg" alt="Portrait by Ivana Cajina" class="gallery__image">
+          <figcaption class="gallery__caption">part4</figcaption>
+        </figure>
+      </a>
+      <!-- Image 8 -->
+      <a href="#" class="gallery__link">
+        <figure class="gallery__thumb">
+          <img src="../gosimages/7.jpg" alt="Portrait by Ethan Haddox" class="gallery__image">
+          <figcaption class="gallery__caption">seven</figcaption>
+        </figure>
+      </a>
+      <!-- Add more images as needed -->
+    </div>
+  </div>
+
+
+<!-- Modal section -->
+<div id="myModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="fullImage">
+  <img class="modal-content slider-image" id="fullImage">
+  <a class="prev" onclick="prevSlide()">&#10094;</a>
+  <a class="next" onclick="nextSlide()">&#10095;</a>
+</div>
+  <div id="caption"></div>
+</div>
+
+<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('header-container').innerHTML = html;
+    })
+    .catch(error => {
+      console.error('Error fetching header:', error);
+    });
+
+  let modal = document.getElementById("myModal");
+  let modalImg = document.getElementById("fullImage");
+  let captionText = document.getElementById("caption");
+  let imgs = document.querySelectorAll(".gallery__image");
+  let modalImages = Array.from(imgs);
+  let currentSlide = 0;
+
+  imgs.forEach((img, index) => {
+    img.onclick = function() {
+      currentSlide = index;  // Set the current index to the clicked image
+      openModal();
+    }
+  });
+
+  document.querySelector('.close').onclick = function() {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function(event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+
+  function openModal() {
+    modal.style.display = "block";
+    modalImg.src = modalImages[currentSlide].src;  // Set the source for the modal image
+    captionText.textContent = modalImages[currentSlide].alt;  // Set the caption
+  }
+
+  function prevSlide() {
+    if (currentSlide > 0) {  // Check if it's not the first image
+      currentSlide--;  // Decrement to go to the previous image
+      openModal();  // Open the modal with the new image
+    }
+  }
+
+  function nextSlide() {
+    if (currentSlide < modalImages.length - 1) {  // Check if it's not the last image
+      currentSlide++;  // Increment to go to the next image
+      openModal();  // Open the modal with the new image
+    }
+  }
+</script>
+
+
+</body>
+</html>

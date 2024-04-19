@@ -1,0 +1,709 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    box-sizing: border-box;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* logo */
+.logo {
+    position: fixed; /* Keeps the logo fixed during scrolling */
+    top: 0; /* Aligns the top of the image to the top of the viewport */
+    left: 0; /* Aligns the left of the image to the left of the viewport */
+    width: 110px; /* Logo width as specified */
+    padding: 10px; /* Padding around the logo for aesthetic spacing */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+}
+
+.logo:hover {
+   
+    
+    transform: scale(1.4); /* Slightly enlarges the logo on hover */
+  
+    
+}
+
+
+
+body{  
+    background-color: rgb(20, 19, 19);
+    color: #666;
+
+}
+/* #header{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+   
+} */
+
+.container{
+    padding: 10px 10%;
+   
+}
+/* nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 50;
+   
+
+} */
+
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Varela Round", sans-serif;
+    color: #666;
+    margin: 0;
+    padding: 0;
+    padding: 80px 30px;
+    background-color: #030303;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    position: fixed; /* Keeps the navbar fixed at the top of the screen */
+    top: 0; /* Aligns the navbar at the top of the viewport */
+    left: 0; /* Aligns the navbar to the left edge of the viewport */
+    width: 100%; /* Ensures the navbar stretches across the full width of the viewport */
+    z-index: 1000; /* This property ensures the navbar stays on top of other content */
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1);  Optionally adds a subtle shadow for better visibility */ 
+    padding: 20px 0; /* Adds vertical padding */
+    background: linear-gradient(to bottom, #131313c4, #42434400);
+   
+  }
+  
+  nav a {
+   
+   
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #666;
+    padding: 0.4rem 0;
+    transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    
+  }
+  
+  nav a:hover {
+    color: #9FB873;
+    text-shadow: 0 0 10px #9FB873, 0 0 20px #9FB873;  /* This creates a glowing effect */
+  }
+  
+  nav:has(a:hover) a:not(:hover) {
+    opacity: 0.3;
+  }
+  
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  body {
+    font-family: "Varela Round", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+    background-color: #262626f3;
+    border-top: 10px solid #262626;
+    padding: 0px 2px;
+  }
+  
+  h1 {
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-top: 120px;
+  }
+  
+  .gallery {
+    max-width: 90%;
+    height: 1500px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .gallery:has(.gallery-panel:hover) .gallery-panel:not(:hover) img {
+    filter: grayscale(100%);
+  }
+  
+  .gallery-panel {
+    flex: 1;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: flex 0.5s ease-in-out;
+  
+  }
+  
+  .gallery-panel:hover {
+    flex: 2.5;
+  }
+  
+  .gallery-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+  }
+  
+  .gallery-panel:nth-child(2) img {
+    scale: 1.15;
+  }
+  
+  .gallery-panel:nth-child(5) img {
+    scale: 1.25;
+  }
+ 
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: fixed; /* Keeps the element in view */
+    top: 20px; /* Distance from the top of the viewport */
+    right: 20px; /* Distance from the right of the viewport */
+    z-index: 1000; /* High z-index to ensure visibility on top of other content */
+  }
+  
+  ul li {
+    list-style: none;
+    margin: 0 015px;
+  }
+  
+  ul li a {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 50px;
+    background: #333;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #666;
+    transition: .5s;
+    z-index: 10; /* Ensure it's above the before pseudo-element */
+   
+  }
+  
+  ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+   
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #333;
+    transition: .5s;
+    transform: scale(0.9);
+    z-index: -1; /* Behind the anchor text */
+  }
+  
+  ul li a:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #9FB873;
+  }
+  
+  ul li a:hover {
+    color: #9FB873;
+    box-shadow: 0 0 5px #9FB873, 0 0 10px #9FB873; /* More prominent shadow for better visibility */
+    text-shadow: 0 0 5px #9FB873;
+  }
+  
+  
+  
+  /* Bhorti? */
+  
+  
+  
+#about{
+    text-align: center;
+    padding: 80px 0;
+    color:#666 ;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.about-col-2{
+    flex-basis:60% ;
+
+}
+.sub-title{
+    font-size: 50px;
+    /* font-weight: 20px; */
+    color: #666;
+    margin-left: 9px;
+    margin-bottom:50px;
+  
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links {
+    position: relative; /* Ensure relative positioning for the pseudo-element */
+}
+
+.tab-links::after {
+    content: '';
+    display: block; /* Ensure the after element is properly displayed */
+    width: 0;
+    height: 3px;
+    background: #9FB873;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    transition: width 0.5s; /* Ensure transition affects the width */
+}
+
+.tab-links.active-link::after {
+    width: 50%; /* Extend the underline on active tab */
+}
+
+.tab-contents {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #9FB873;
+    font-size: 20px;
+    margin-bottom:10px;
+    letter-spacing: 3px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+
+
+/*Expertise*/
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top:50px;
+    border-color: aliceblue;
+}
+.services-list div{
+    background: #333;
+    padding: 40px;
+    font-size: 15px;
+    font-weight: 300;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s,transform 0.5s;
+    border-color: #666;
+    border-style:dashed;
+    border-width: 3px;
+
+}
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #9FB873;
+    font-size: 19px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: #292929;
+    transform: translate(-10px);
+}
+
+
+
+
+/*******************************portfolio***********************************/
+.work-list{
+ 
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top:50px;
+}
+.work{
+    border-radius:10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: 0.5s;
+}
+.layer
+{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(56, 54, 54, 0), #b6b6195b);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom:  0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: #616161;
+
+}
+.layer p{
+    font-size: 15px;
+    color: #040404;
+}
+
+
+.layer a{
+    margin-top:20px ;
+    color: #666;
+    text-decoration: none;
+    font-size: 35px;
+    line-height: 60px;
+    background: #333;
+    width: 60PX;
+    height: 60px;
+    border-radius: 50%;
+}
+.work:hover  img{
+    transform: scale(1.1);
+
+}
+.work:hover .layer {
+height: 100%;
+}
+
+.btn{
+    display: block;
+    margin:50PX auto ;
+    width: fit-content;
+    border: 1px solid  #333;
+    padding: 14px  50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color:#666;
+    transition:background 0.5s ;
+}
+.btn:hover{
+    background: #9fb87397;
+
+}
+
+.layer a i{
+    font-size: 30px;
+    color: #666;
+   
+    
+}
+
+
+/*****************************contact***********************************/
+
+
+
+.contact-left{
+    flex-basis: 35%;
+
+}
+.contact-right{
+    flex-basis: 35%;
+    margin-top: 90px;
+}
+.contact-left p{
+    margin-top:30px ;
+}
+.contact-left p i{
+    color: #666;
+    margin-right: 15px;
+    font-size: 25px;
+
+}
+.social-icons{
+    margin-top: 30px;
+
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 25px;
+    color:#666;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #333;
+    transform:translateY(-5px);
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: #9FB873;
+}
+.btn.btn2:hover{
+    background-color: #9FB873;
+}
+
+.contact-right form{
+    width: 100%;
+    margin-top: 90px;
+
+
+}
+.contact-left{
+    margin-top: 0;
+}
+
+
+
+
+form input,form textarea{
+    width: 100%;
+    outline: none;
+    background: #333;
+    padding: 15px;
+    margin: 15px 0;
+    color: #666;
+    font-size: 18px;
+    border-radius: 10px;
+}
+form btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #333;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+
+
+/***************************** Responsive for small screen **********************************/
+
+
+
+nav .fa-solid{
+    display: none;
+}
+@media only screen and (max-width: 800px) {
+    ul li a{
+        display: none;
+    }
+    nav a{
+        display: none;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+
+    nav ul.active {
+        right: 0; /* Adjust this property when the menu button is clicked */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fav {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .sub-title {
+        font-size: 40px;
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+
+    .about-col-2 {
+        font-size: 14px;
+    }
+
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+
+ 
+
+    /* Making sure buttons and interactive elements are easier to interact with on mobile */
+    .btn, .btn2 {
+        padding: 14px 28px; /* Larger hit area for touch devices */
+        font-size: 16px;
+    }
+
+    .gallery-panel img {
+        width: 100%; /* Ensure images scale down correctly */
+    }
+
+    .services-list div, .work-list .work {
+        /* Adjust the layout to stack vertically */
+        width: 100%;
+    }
+}
+
+#msg {
+    color: #9FB873;
+    display: block;
+    margin-top: -35px;
+}
+
+
+/* up arrow */
+#up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: none;
+    cursor: pointer;
+     padding: 10px;/* Add padding for better spacing */
+     border-radius: 50%; 
+    background-color:#9FB873;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); Add shadow for 3D effect */
+    transition: transform 0.3s ease, background 0.3s ease; /* Smooth transition for hover effect */
+    border: none;
+}
+
+#up i {
+    font-size: 24px;
+    color: #333; /* White color for the icon to stand out */
+}
+
+#up.show {
+    display: block;
+}
+
+#up:hover {
+    transform: translateY(-5px); /* Move the button up slightly on hover */
+    /* background: linear-gradient(145deg, #50d67d, #636e74); Change gradient direction on hover */
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+
+    background: #333;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666;
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #5555}
+
+
+
+
+/* bacccc */
+/* Medium devices (tablets, 768px and up) */
+
+/* Large devices (desktops, 992px and up) */
