@@ -18,5 +18,5 @@ This repository contains the source code for my personal website. The site showc
 
 site link:  
 
-https://officialharjot.github.io/P0rtfolio/
+ https://harjotsinghproductions.com/
 
