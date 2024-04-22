@@ -634,6 +634,15 @@ nav .fa-solid{
         /* Adjust the layout to stack vertically */
         width: 100%;
     }
+  .gallery {
+        max-width: 90%;
+        height: 350px;
+        margin-inline: auto;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
+  
 }
 
 #msg {
