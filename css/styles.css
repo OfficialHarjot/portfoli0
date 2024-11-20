@@ -553,6 +553,72 @@ form btn2{
 
 
 
+
+#msg {
+    color: #9FB873;
+    display: block;
+    margin-top: -35px;
+}
+
+
+/* up arrow */
+#up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: none;
+    cursor: pointer;
+     padding: 10px;/* Add padding for better spacing */
+     border-radius: 50%; 
+    background-color:#9FB873;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); Add shadow for 3D effect */
+    transition: transform 0.3s ease, background 0.3s ease; /* Smooth transition for hover effect */
+    border: none;
+}
+
+#up i {
+    font-size: 24px;
+    color: #333; /* White color for the icon to stand out */
+}
+
+#up.show {
+    display: block;
+}
+
+#up:hover {
+    transform: translateY(-5px); /* Move the button up slightly on hover */
+    /* background: linear-gradient(145deg, #50d67d, #636e74); Change gradient direction on hover */
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+
+    background: #333;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666;
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #5555
+}
+
 /***************************** Responsive for small screen **********************************/
 
 
@@ -560,6 +626,11 @@ form btn2{
 nav .fa-solid{
     display: none;
 }
+
+
+
+
+
 @media only screen and (max-width: 800px) {
     ul li a{
         display: none;
@@ -642,77 +713,192 @@ nav .fa-solid{
         justify-content: center;
         gap: 1rem;
       }
+
+      
+    /* portfolio */
+    .layer h3{
+        font-size: 8px;
+        /* font-weight: 300; */
+        margin-bottom: 0;
+        color: #616161;
+    
+    }
+    .layer p{
+        font-size: 5px;
+        color: #040404;
+    }
+
+
+    .layer a{
+        margin-top:0px ;
+        color: #666;
+        text-decoration: none;
+        font-size: 5px;
+        line-height: 10px;
+        background: #333;
+        width: 30PX;
+        height: 30px;
+        border-radius: 50%;
+    }
   
 }
-
-#msg {
-    color: #9FB873;
-    display: block;
-    margin-top: -35px;
+/* 1210 */
+@media only screen and (max-width: 1210px) {
+    ul li a{
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+    .gallery {
+        max-width: 90%;
+        height: 500px;
+        margin-inline: auto;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
 }
-
-
-/* up arrow */
-#up {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-    display: none;
-    cursor: pointer;
-     padding: 10px;/* Add padding for better spacing */
-     border-radius: 50%; 
-    background-color:#9FB873;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); Add shadow for 3D effect */
-    transition: transform 0.3s ease, background 0.3s ease; /* Smooth transition for hover effect */
-    border: none;
-}
-
-#up i {
-    font-size: 24px;
-    color: #333; /* White color for the icon to stand out */
-}
-
-#up.show {
-    display: block;
-}
-
-#up:hover {
-    transform: translateY(-5px); /* Move the button up slightly on hover */
-    /* background: linear-gradient(145deg, #50d67d, #636e74); Change gradient direction on hover */
-}
-
-.hidden {
-    opacity: 0;
-    transform: translateY(100px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-
-    background: #333;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #666;
-}
-
-::-webkit-scrollbar-thumb:hover {
-
-    background: #5555}
-
-
-
 
 /* bacccc */
 /* Medium devices (tablets, 768px and up) */
 
 /* Large devices (desktops, 992px and up) */
+@media only screen and (max-width: 1620px) {
+
+
+
+    /* portfolio */
+    .layer h3{
+        font-size: 20px;
+        font-weight: 300;
+        margin-bottom: 20px;
+        color: #616161;
+    
+    }
+    .layer p{
+        font-size: 10px;
+        color: #040404;
+    }
+
+
+    nav ul .fav {
+        font-size: 50px;
+        position: absolute;
+        top: 5px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    ul li a{
+        /* display: none; */
+        font-size: 30px;
+        height: 50px;
+        width: 50px;
+        line-height: 40px;
+      
+
+    }
+    nav a{
+        /* display: none; */
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+
+    nav ul.active {
+        right: 0; /* Adjust this property when the menu button is clicked */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px;
+       
+
+    }
+
+
+
+    .sub-title {
+        font-size: 40px;
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+
+    .about-col-2 {
+        font-size: 14px;
+    }
+
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+
+ 
+
+    /* Making sure buttons and interactive elements are easier to interact with on mobile */
+    .btn, .btn2 {
+        padding: 14px 28px; /* Larger hit area for touch devices */
+        font-size: 16px;
+    }
+
+    .gallery-panel img {
+        width: 100%; /* Ensure images scale down correctly */
+    }
+
+    .services-list div, .work-list .work {
+        /* Adjust the layout to stack vertically */
+        width: 100%;
+    }
+/*   .gallery {
+        max-width: 90%;
+        height: 1200px;
+        margin-inline: auto;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      } */
+
+      /* nav bar */
+
+      nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        position: fixed; /* Keeps the navbar fixed at the top of the screen */
+        top: 0; /* Aligns the navbar at the top of the viewport */
+        left: 0; /* Aligns the navbar to the left edge of the viewport */
+        width: 100%; /* Ensures the navbar stretches across the full width of the viewport */
+        /* box-shadow: 0 2px 4px rgba(0,0,0,0.1);  Optionally adds a subtle shadow for better visibility */ 
+        padding: 20px 0; /* Adds vertical padding */
+       
+      }
+      
+      nav a {
+
+        font-size: 20px;
+        font-weight: 400;
+      
+    
+        
+      }
+  
+}
+
