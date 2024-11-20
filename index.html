@@ -84,34 +84,19 @@
     <style>
 
 
-/* #sidemenu a, #sidemenu i.fa-bars {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: black;
-    text-align: center;
-}
-
-#sidemenu ul {
-    display: none; /* Initially hide social icons on mobile 
-} */
-
-/* #sidemenu i.fa-xmark {
-    display: none; /* Hide close icon initially */
-/* }
-
-#sidemenu i.fa-bars {
-    display: block; /* Show menu bar icon initially 
-} */ 
-
-/* Hide the logo when position is fixed to avoid overlap */
-/* .logo {
-    display: none;
-} */
 
     </style>
 
-
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init({
+    publicKey: "ZOFNVhCdMU4U5Lus6",
+  });
+})();
+</script>
 
 </head>
 <body>
@@ -330,10 +315,10 @@
                 </div>
                 <div class="contact-right animate-on-scroll hidden">
                     <form name="submit-to-google-sheet" action="https://formspree.io/f/mwkgwody" method="POST">
-                        <input type="text" name="Name" placeholder="YourName" required/>
-                        <input type="email" name="Email" placeholder="YourEmail@mail.com" required/>
-                        <textarea name="Message" rows="6" placeholder="Write your message here..."></textarea>
-                        <button type="submit" class="btn btn2">Send Message</button>
+                        <input type="text"  id="name"   name="Name" placeholder="YourName" required/>
+                        <input type="email"  id="email" name="Email" placeholder="YourEmail@mail.com" required/>
+                        <textarea name="Message"  id="message" rows="6" placeholder="Write your message here..."></textarea>
+                        <button type="submit"    onclick="sendMail()"  class="btn btn2">Send Message</button>
                     </form>
                     <span id="msg"></span>
                 </div>
@@ -421,6 +406,24 @@
         document.querySelector('#sidemenu i.fa-bars').style.display = 'block';
     }
     </script>
+<!-- for email functionality -->
+ <script>
+    function sendMail(){
+        let parms = {
+            name : document.getElementById("name").value,
+            email : document.getElementById("email").value,
+            message : document.getElementById("message").value,
+            
+        }
+
+        emailjs.send("service_mycyri6","template_zvc6tdk",parms)
+    }
+ </script>
+
+
+
+
+
     
 </body>
 </html>
